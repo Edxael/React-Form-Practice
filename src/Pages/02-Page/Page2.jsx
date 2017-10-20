@@ -48,16 +48,18 @@ export default class extends React.Component {
     return(
       <div>
 
+        <p>This code captures names and saves them to the database(this.state.db), when click "Add Name", then show all names on db when click "show all names." </p>
+
         <form>
           <input type="text"
             value = { this.state.name }
             onChange={ (eve) => { this.setState({ name: eve.target.value }) } } />
         </form>
 
-        <button onClick={this.exe1} >Show Name..</button>
+        <button onClick={this.exe1} >Add Name</button>
         <br/><br/>
 
-        { this.state.show ? React.createElement(this.exe2) : <div>Name: </div> }
+        { this.state.show ? React.createElement(this.exe2) : <div>Name to add to Database: </div> }
 
         <br/><br/>
 
